@@ -29,7 +29,9 @@ jobs:
 
       - name: Build and push Docker image to ECR
         run: 
-          docker build -t medilab:latest .
-          docker tag medilab:latest 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest
-          docker push 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest
+       #   docker build -t medilab:latest .
+
+       #   docker tag medilab:latest 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest
+
+      #    docker push 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest
 

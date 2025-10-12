@@ -32,6 +32,6 @@ jobs:
           docker build -t medilab:latest . 
 
           docker tag medilab:latest 906195732747.dkr.ecr.us-east-1.amazonaws.com/medilab:latest
-          
+
           docker push 906195732747.dkr.ecr.us-east-1.amazonaws.com/medilab:latest
 

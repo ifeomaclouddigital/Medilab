@@ -43,7 +43,7 @@ jobs:
 
            ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@44.193.28.56 "docker ps"
 
-           ssh -o StrictHostKeyChecking=no -i mykey.pem  ubuntu@44.193.28.56 "hostnamectl"
+           ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@44.193.28.56 "hostnamectl"
         
 
              

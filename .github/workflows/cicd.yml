@@ -24,9 +24,9 @@ jobs:
 
       - name: Build and push Docker image to ECR
         run: |
-          docker build -t medilab:latest1 .
-          docker tag medilab:latest1 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest1
-          docker push 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest1
+          docker build -t medilab:latest2 .
+          docker tag medilab:latest2 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest2
+          docker push 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest2
 
   deploy:
     runs-on: ubuntu-latest
@@ -38,8 +38,8 @@ jobs:
           chmod 600 mykey.pem
           cat mykey.pem
 
-          ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@44.193.28.56 "docker pull 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest1"
+          ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@44.193.28.56 "docker pull 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest2"
         
                   ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@44.193.28.56 "docker rm -f medilab"
 
-          ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@44.193.28.56 "docker run -d -p 80:80 --name medilab --restart always 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest1"
+          ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@44.193.28.56 "docker run -d -p 80:80 --name medilab --restart always 807056234933.dkr.ecr.us-east-1.amazonaws.com/medilab:latest2"

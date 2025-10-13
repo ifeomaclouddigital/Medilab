@@ -3,9 +3,9 @@ name: build and push docker image to ECR
 on:
   push:
     branches: [ main ]
-
 jobs:
-build-push:
+    
+ build-push:
   runs-on: ubuntu-latest
   steps:
     - name: Checkout code

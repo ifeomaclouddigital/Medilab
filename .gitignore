@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+.next/
+*.zip
+*.tar.gz
+*.tgz
+*.png
+*.jpg
+*.jpeg
+
